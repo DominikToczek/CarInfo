@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using CarInfo.Views;
-using CarInfo.Data
+using CarInfo.Data;
 using CarInfo.Interfaces;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -18,7 +18,7 @@ namespace CarInfo
                 if (localDatabase == null)
                 {
                     var file = DependencyService.Get<IFile>();
-                    var path = file.GetLocalFilePath("app.database");
+                    var path = file.GetLocalFilePath("CarInfo.database");
                     localDatabase = new LocalDatabase(path);
                 }
                 return localDatabase;

@@ -21,9 +21,8 @@ namespace CarInfo.Data
         {
             return await database.Table<T>().ToListAsync();
         }
-        public async Task<int> SaveItem<T>(T item) where T : class, ISqlite, new()
+        public async Task<int> SaveItem<T>(T item) where T : class, new()
         {
-            await Task.Delay(5000);
             var result = await database.UpdateAsync(item);
 
             if (result == 0)

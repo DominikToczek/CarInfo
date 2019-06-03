@@ -6,6 +6,7 @@ namespace CarInfo.Models
 {
     public class Car
     {
+        [SQLite.PrimaryKey, SQLite.AutoIncrement]
         public int ID { get; set; }
         public string Brand { get; set; }
         public string Model { get; set; }
