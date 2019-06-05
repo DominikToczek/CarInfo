@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using CarInfo.Interfaces;
 
 namespace CarInfo.Models
 {
-    public class Car
+    public class Car : ISqlite
     {
         [SQLite.PrimaryKey, SQLite.AutoIncrement]
         public int ID { get; set; }

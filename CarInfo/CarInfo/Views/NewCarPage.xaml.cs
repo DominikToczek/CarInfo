@@ -44,8 +44,12 @@ namespace CarInfo.Views
                 FuelType = FuelTypeEntry.Text,
                 FuelTankSize = Convert.ToInt32(FuelSizeEntry.Text)
             };
-
+            var a0 = car;
+            var a1 = App.LocalDatabase;
+            var a2 = a1.SaveItem(a0);
             await App.LocalDatabase.SaveItem(car);
+            await DisplayAlert("New car", $"{car.Brand} {car.Model} has been added to your car list.", "OK");
+            await Navigation.PopToRootAsync();
         }
     }
 }

@@ -17,8 +17,8 @@ namespace CarInfo
             {
                 if (localDatabase == null)
                 {
-                    var file = DependencyService.Get<IFile>();
-                    var path = file.GetLocalFilePath("CarInfo.database");
+                    var fileHelper = DependencyService.Get<IFileHelper>();
+                    var path = fileHelper.GetLocalFilePath("CarInfo.database");
                     localDatabase = new LocalDatabase(path);
                 }
                 return localDatabase;
@@ -30,21 +30,6 @@ namespace CarInfo
 
 
             MainPage = new MainPage();
-        }
-
-        protected override void OnStart()
-        {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using CarInfo.Models;
+﻿using CarInfo.Interfaces;
+using CarInfo.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -21,7 +22,7 @@ namespace CarInfo.Data
         {
             return await database.Table<T>().ToListAsync();
         }
-        public async Task<int> SaveItem<T>(T item) where T : class, new()
+        public async Task<int> SaveItem<T>(T item) where T : class, ISqlite, new()
         {
             var result = await database.UpdateAsync(item);
 

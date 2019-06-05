@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CarInfo.Interfaces
 {
-    public interface IFile
+    public interface IFileHelper
     {
         string GetLocalFilePath(string fileName);
     }

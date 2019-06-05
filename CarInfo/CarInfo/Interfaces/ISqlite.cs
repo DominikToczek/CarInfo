@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CarInfo.Models
+namespace CarInfo.Interfaces
 {
     public interface ISqlite
     {
