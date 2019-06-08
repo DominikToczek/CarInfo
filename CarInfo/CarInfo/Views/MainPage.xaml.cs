@@ -1,60 +1,55 @@
-﻿using CarInfo.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace CarInfo.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : MasterDetailPage
-    {
-        Dictionary<int, NavigationPage> MenuPages = new Dictionary<int, NavigationPage>();
-        public MainPage()
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class MainPage : ContentPage
+	{
+		public MainPage ()
+		{
+			InitializeComponent ();
+		}
+        protected override void OnSizeAllocated(double width, double height)
         {
-            InitializeComponent();
-
-            MasterBehavior = MasterBehavior.Popover;
-
-            MenuPages.Add((int)MenuItemType.Home, (NavigationPage)Detail);
+            base.OnSizeAllocated(width, height);
+            MenuGrid.HeightRequest = height;
         }
 
-        public async Task NavigateFromMenu(int id)
+        private async void CarsButton_Clicked(object sender, EventArgs e)
         {
-            if (!MenuPages.ContainsKey(id))
-            {
-                switch (id)
-                {
-                    case (int)MenuItemType.Home:
-                        MenuPages.Add(id, new NavigationPage(new HomePage()));
-                        break;
-                    case (int)MenuItemType.Cars:
-                        MenuPages.Add(id, new NavigationPage(new CarsPage()));
-                        break;
-                    case (int)MenuItemType.Routes:
-                        MenuPages.Add(id, new NavigationPage(new RoutesPage()));
-                        break;
-                    case (int)MenuItemType.Statistics:
-                        MenuPages.Add(id, new NavigationPage(new StatisticsPage()));
-                        break;
-                    case (int)MenuItemType.About:
-                        MenuPages.Add(id, new NavigationPage(new AboutPage()));
-                        break;
-                }
-            }
+            await Navigation.PushAsync(new CarsPage());
+        }
 
-            var newPage = MenuPages[id];
+        private async void RoutesButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RoutesPage());
+        }
 
-            if (newPage != null && Detail != newPage)
-            {
-                Detail = newPage;
+        private async void CostsButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CostsPage());
+        }
 
-                if (Device.RuntimePlatform == Device.Android)
-                    await Task.Delay(100);
+        private async void FuelButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new FuelPage());
+        }
 
-                IsPresented = false;
-            }
+        private async void StatisticsButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new StatisticsPage());
+        }
+
+        private void AboutButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AboutPage());
         }
     }
 }

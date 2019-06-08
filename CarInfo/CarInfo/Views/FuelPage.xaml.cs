@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace CarInfo.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HomePage : ContentPage
+	public partial class FuelPage : ContentPage
 	{
-		public HomePage ()
+		public FuelPage ()
 		{
 			InitializeComponent ();
 		}

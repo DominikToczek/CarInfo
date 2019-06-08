@@ -1,23 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:views="clr-namespace:CarInfo.Views"
-            x:Class="CarInfo.Views.MainPage">
-
-    <MasterDetailPage.Master>
-        <views:MenuPage />
-    </MasterDetailPage.Master>
-
-    <MasterDetailPage.Detail>
-        <NavigationPage>
-            <NavigationPage.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="tab_feed.png"/>
-                </OnPlatform>
-            </NavigationPage.Icon>
-            <x:Arguments>
-                <views:ItemsPage />
-            </x:Arguments>
-        </NavigationPage>
-    </MasterDetailPage.Detail>
-</MasterDetailPage>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarInfo.Views.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid x:Name="MenuGrid" ColumnSpacing="2" RowSpacing="2" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button Text="Cars" Grid.Column="0" Grid.Row="0" Clicked="CarsButton_Clicked"/>
+                <Button Text="Routes" Grid.Column="1" Grid.Row="0" Clicked="RoutesButton_Clicked"/>
+                <Button Text="Costs" Grid.Column="0" Grid.Row="1" Clicked="CostsButton_Clicked"/>
+                <Button Text="Fuel" Grid.Column="1" Grid.Row="1" Clicked="FuelButton_Clicked"/>
+                <Button Text="Statistics" Grid.Column="0" Grid.Row="2" Clicked="StatisticsButton_Clicked"/>
+                <Button Text="About" Grid.Column="1" Grid.Row="2" Clicked="AboutButton_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
