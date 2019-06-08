@@ -11,17 +11,16 @@ using CarInfo.Models;
 namespace CarInfo.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class RoutesPage : ContentPage
+	public partial class NewRouteCarSelectPage : ContentPage
 	{
-		public RoutesPage()
+		public NewRouteCarSelectPage ()
 		{
 			InitializeComponent ();
 		}
-
         private async Task RefreshListView()
         {
-            var routes = await App.LocalDatabase.GetAll<Route>();
-            routesListView.ItemsSource = routes;
+            var cars = await App.LocalDatabase.GetAll<Car>();
+            CarListView.ItemsSource = cars;
         }
         protected override async void OnAppearing()
         {
@@ -29,9 +28,14 @@ namespace CarInfo.Views
             await RefreshListView();
         }
 
-        private async void AddItem_Clicked(object sender, EventArgs e)
+        private async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            await Navigation.PushAsync(new NewRouteCarSelectPage());
+            if (e.Item == null)
+                return;
+
+            await Navigation.PushAsync(new NewRoutePage((Car)e.Item));
+            
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }

@@ -5,14 +5,15 @@ using CarInfo.Interfaces;
 
 namespace CarInfo.Models
 {
-    public class Route
+    public class Route : ISqlite
     {
         [SQLite.PrimaryKey, SQLite.AutoIncrement]
         public int ID { get; set; }
-        public DateTime Duration { get; set; }
-        public string Distance { get; set; }
         public string From { get; set; }
         public string To { get; set; }
-        public int carID { get; set; }
+        public int Distance { get; set; }
+        public TimeSpan StartTime { get; set; }
+        public TimeSpan EndTime { get; set; }
+        public int CarID { get; set; }
     }
 }
