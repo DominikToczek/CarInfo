@@ -2,11 +2,36 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CarInfo.Views.FuelPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel"
+                     Priority="0"
+                     Order="Primary"
+                     Clicked="Cancel_Clicked"/>
+        <ToolbarItem Text="Add"
+                     Priority="0"
+                     Order="Primary"
+                     Clicked="Add_Clicked"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid ColumnSpacing="1" RowSpacing="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Label Text="Fuel Type" Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" Margin="20, 10, 0, 0" FontSize="Medium"/>
+            <Label Text="Quantity" Grid.Column="0" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" Margin="20, 10, 0, 0" FontSize="Medium"/>
+            <Label Text="Price" Grid.Column="0" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center" Margin="20, 10, 0, 0" FontSize="Medium"/>
+            <Label Text="Date" Grid.Column="0" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" Margin="20, 10, 0, 0" FontSize="Medium"/>
+            <Picker x:Name="FuelTypePicker" Grid.Column="1" Grid.Row="0" Title="Fuel type" />
+            <Entry x:Name="QuantityEntry" Grid.Column="1" Grid.Row="1" Keyboard="Numeric" />
+            <Entry x:Name="PriceEntry" Grid.Column="1" Grid.Row="2" Keyboard="Numeric" />
+            <DatePicker x:Name="DatePicker" Grid.Column="1" Grid.Row="3" />
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -16,6 +16,7 @@ namespace CarInfo.Data
             database = new SQLiteAsyncConnection(path);
             database.CreateTableAsync<Car>().Wait();
             database.CreateTableAsync<Route>().Wait();
+            database.CreateTableAsync<Fuel>().Wait();
         }
         
         public async Task<List<T>> GetAll<T>() where T : class, new()
