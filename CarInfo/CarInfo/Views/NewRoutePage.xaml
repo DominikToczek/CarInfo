@@ -30,7 +30,6 @@
             <Label Text="Distance" Grid.Column="0" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center" Margin="20, 10, 0, 0" FontSize="Medium"/>
             <Label Text="Start time" Grid.Column="0" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" Margin="20, 10, 0, 0" FontSize="Medium"/>
             <Label Text="Start time" Grid.Column="0" Grid.Row="4" HorizontalOptions="Center" VerticalOptions="Center" Margin="20, 10, 0, 0" FontSize="Medium"/>
-            <Label Text="Car" Grid.Column="0" Grid.Row="5" HorizontalOptions="Center" VerticalOptions="Center" Margin="20, 10, 0, 0" FontSize="Medium"/>
             <Entry x:Name="FromEntry" Grid.Column="1" Grid.Row="0"/>
             <Entry x:Name="ToEntry" Grid.Column="1" Grid.Row="1"/>
             <Entry x:Name="DistanceEntry" Grid.Column="1" Grid.Row="2" Keyboard="Numeric"/>

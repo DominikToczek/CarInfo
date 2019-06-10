@@ -29,7 +29,11 @@ namespace CarInfo
             InitializeComponent();
 
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new MainPage())
+            {
+                BarBackgroundColor = Color.FromHex("#2D2D2D"),
+                BarTextColor = Color.White
+            };
         }
     }
 }

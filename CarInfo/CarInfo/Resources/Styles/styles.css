@@ -1,0 +1,18 @@
+﻿^contentpage {
+    background-color: #505050;
+    color: #ffffff;
+}
+
+button {
+    background-color: #717172;
+    border-radius: 5;
+}
+
+listview {
+    background-color: #505050;
+}
+
+.listViewTitle {
+    font-size: medium;
+    margin: 10;
+}
