@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarInfo.Views.CarDetailsPage">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="1" RowSpacing="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Label Text="Brand:" Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" Margin="20, 10, 0, 0" FontSize="Medium"/>
+            <Label Text="Model:" Grid.Column="0" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" Margin="20, 10, 0, 0" FontSize="Medium"/>
+            <Label Text="Engine:" Grid.Column="0" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center" Margin="20, 10, 0, 0" FontSize="Medium"/>
+            <Label Text="Mileage:" Grid.Column="0" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" Margin="20, 10, 0, 0" FontSize="Medium"/>
+            <Label Text="Fuel type:" Grid.Column="0" Grid.Row="4" HorizontalOptions="Center" VerticalOptions="Center" Margin="20, 10, 0, 0" FontSize="Medium"/>
+            <Label Text="Fuel tank size:" Grid.Column="0" Grid.Row="5" HorizontalOptions="Center" VerticalOptions="Center" Margin="20, 10, 0, 0" FontSize="Medium"/>
+            <Label x:Name="BrandLabel" Grid.Column="1" Grid.Row="0" Margin="20, 10, 0, 0" FontSize="Medium" />
+            <Label x:Name="ModelLabel" Grid.Column="1" Grid.Row="1" Margin="20, 10, 0, 0" FontSize="Medium" />
+            <Label x:Name="EngineLabel" Grid.Column="1" Grid.Row="2" Margin="20, 10, 0, 0" FontSize="Medium" />
+            <Label x:Name="MileageLabel" Grid.Column="1" Grid.Row="3" Margin="20, 10, 0, 0" FontSize="Medium" />
+            <Label x:Name="FuelTypeLabel" Grid.Column="1" Grid.Row="4" Margin="20, 10, 0, 0" FontSize="Medium" />
+            <Label x:Name="FuelSizeLabel" Grid.Column="1" Grid.Row="5" Margin="20, 10, 0, 0" FontSize="Medium" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

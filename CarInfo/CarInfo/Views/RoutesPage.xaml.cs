@@ -33,5 +33,15 @@ namespace CarInfo.Views
         {
             await Navigation.PushAsync(new NewRouteCarSelectPage());
         }
+
+        private async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            if (e.Item == null)
+                return;
+
+            await Navigation.PushAsync(new RouteDetailsPage((Route)e.Item));
+
+            ((ListView)sender).SelectedItem = null;
+        }
     }
 }
