@@ -1,12 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CarInfo.Views.AboutPage">
+             x:Class="CarInfo.Views.AboutPage"
+             Title="About">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Simple application that alows to save information about cars, routes and manage fuel costs"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                Margin="20,20,20,20" 
+                FontSize="Medium"/>
+            <Label Text="Version: 1.0"
+                VerticalOptions="EndAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                Margin="0, 0, 0, 20"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

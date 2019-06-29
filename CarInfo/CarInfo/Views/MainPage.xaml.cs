@@ -42,10 +42,12 @@ namespace CarInfo.Views
             await Navigation.PushAsync(new FuelPage());
         }
 
-        private async void StatisticsButton_Clicked(object sender, EventArgs e)
+        /*
+         * private async void StatisticsButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new StatisticsPage());
         }
+        */
 
         private void AboutButton_Clicked(object sender, EventArgs e)
         {

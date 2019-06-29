@@ -19,7 +19,7 @@
                 <Button Text="Routes" Grid.Column="1" Grid.Row="0" Clicked="RoutesButton_Clicked"/>
                 <Button Text="Costs" Grid.Column="0" Grid.Row="1" Clicked="CostsButton_Clicked"/>
                 <Button Text="Fuel" Grid.Column="1" Grid.Row="1" Clicked="FuelButton_Clicked"/>
-                <Button Text="Statistics" Grid.Column="0" Grid.Row="2" Clicked="StatisticsButton_Clicked"/>
+                <!-- <Button Text="Statistics" Grid.Column="0" Grid.Row="2" Clicked="StatisticsButton_Clicked"/> -->
                 <Button Text="About" Grid.Column="1" Grid.Row="2" Clicked="AboutButton_Clicked"/>
             </Grid>
         </StackLayout>
